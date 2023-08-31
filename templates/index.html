@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sta.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Fake News Detection</title>
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-6">
+                <h1 class="mb-4">Fake News Detection</h1>
+                <form id="news-form">
+                    <div class="form-group">
+                        <label for="headline">Headline:</label>
+                        <input type="text" class="form-control" name="headline" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="articleBody">Article Body:</label>
+                        <textarea class="form-control" name="articleBody" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                </form>
+                <div class="prediction-container mt-4" id="prediction">
+                    <!-- Prediction will be displayed here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
