@@ -4,3 +4,4 @@ numpy
 nltk
 xgboost
 flask
+gunicorn
